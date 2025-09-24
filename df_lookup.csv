@@ -1,0 +1,144 @@
+code,sdg,group,description
+Goal_1,1,social,End poverty in all its forms everywhere
+Goal_2,2,social,"End hunger, achieve food security and improved nutrition and promote sustainable agriculture"
+Goal_3,3,social,Ensure healthy lives and promote well-being for all at all ages
+Goal_4,4,social,Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all
+Goal_5,5,social,Achieve gender equality and empower all women and girls
+Goal_6,6,environmental,Ensure availability and sustainable management of water and sanitation for all
+Goal_7,7,social,"Ensure access to affordable, reliable, sustainable and modern energy for all"
+Goal_8,8,economic,"Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all"
+Goal_9,9,economic,"Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation"
+Goal_10,10,economic,Reduce inequality within and among countries
+Goal_11,11,social,"Make cities and human settlements inclusive, safe, resilient and sustainable"
+Goal_12,12,economic,Ensure sustainable consumption and production patterns
+Goal_13,13,environmental,Take urgent action to combat climate change and its impacts
+Goal_14,14,environmental,"Conserve and sustainably use the oceans, seas and marine resources for sustainable development"
+Goal_15,15,environmental,"Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss"
+Goal_16,16,social,"Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels"
+Goal_17,17,other,Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development
+sdg1_wpc,1,social,Poverty headcount ratio at $2.15/day (%)
+sdg1_lmicpov,1,social,Poverty headcount ratio at $3.65/day (%)
+sdg1_oecdpov,1,social,Poverty rate after taxes and transfers (%)
+sdg2_undernsh,2,social,Prevalence of undernourishment (%)
+sdg2_stunting,2,social,Prevalence of stunting in children under 5 years of age (%)
+sdg2_wasting,2,social,Prevalence of wasting in children under 5 years of age (%)
+sdg2_mdd,2,social,Minimum dietary diversity among children aged 6-23 months (%)
+sdg2_obesity,2,social,"Prevalence of obesity, BMI ≥ 30 (% of adult population)"
+sdg2_trophic,2,social,Human Trophic Level (best 2-3 worst)
+sdg2_crlyld,2,social,Cereal yield (tonnes per hectare of harvested land)
+sdg2_snmi,2,social,Sustainable Nitrogen Management Index (best 0-1.41 worst)
+sdg2_yieldgap,2,social,Yield gap closure (% of potential yield)
+sdg2_pestexp,2,social,Exports of hazardous pesticides (tonnes per million population)
+sdg3_matmort,3,social,"Maternal mortality ratio (per 100,000 live births) "
+sdg3_neonat,3,social,"Neonatal mortality rate (per 1,000 live births)"
+sdg3_u5mort,3,social,"Mortality rate, under-5 (per 1,000 live births)"
+sdg3_tb,3,social,"Incidence of tuberculosis (per 100,000 population)"
+sdg3_hiv,3,social,"New HIV infections (per 1,000 uninfected population, all ages)"
+sdg3_ncds,3,social,"Age-standardized death rate due to cardiovascular disease, cancer, diabetes, or chronic respiratory disease in adults aged 30 to 70 years (%)"
+sdg3_pollmort,3,social,"Age-standardized death rate attributable to household air pollution and ambient air pollution (per 100,000 population)"
+sdg3_traffic,3,social,"Traffic deaths (per 100,000 population)"
+sdg3_lifee,3,social,Life expectancy at birth (years)
+sdg3_fertility,3,social,"Adolescent fertility rate (births per 1,000 females aged 15 to 19)"
+sdg3_births,3,social,Births attended by skilled health personnel (%)
+sdg3_vac,3,social,Surviving infants who received 2 WHO-recommended vaccines (%)
+sdg3_uhc,3,social,Universal health coverage (UHC) index of service coverage (worst 0-100 best)
+sdg3_swb,3,social,"Subjective well-being (average ladder score, worst 0-10 best)"
+sdg3_region,3,social,Gap in life expectancy at birth among regions (years)
+sdg3_incomeg,3,social,Gap in self-reported health status by income (percentage points)
+sdg3_smoke,3,social,Daily smokers (% of population aged 15 and over)
+sdg4_preprim,4,social,Participation rate in pre-primary organized learning (% of children aged 4 to 6)
+sdg4_primary,4,social,Net primary enrollment rate (%)
+sdg4_second,4,social,Lower secondary completion rate (%)
+sdg4_literacy,4,social,Literacy rate (% of population aged 15 to 24)
+sdg4_tertiary,4,social,Tertiary educational attainment (% of population aged 25 to 34)
+sdg4_pisa,4,social,PISA score (worst 0-600 best)
+sdg4_socioec,4,social,Variation in mathematics performance explained by socio-economic status (%)
+sdg4_underach,4,social,Underachievers in mathematics (% of 15-year-olds) 
+sdg5_familypl,5,social,Demand for family planning satisfied by modern methods (% of females aged 15 to 49)
+sdg5_edat,5,social,Ratio of female-to-male mean years of education received (%)
+sdg5_lfpr,5,social,Ratio of female-to-male labor force participation rate (%)
+sdg5_parl,5,social,Seats held by women in national parliament (%)
+sdg5_paygap,5,social,Gender wage gap (% of male median wage)
+sdg6_water,6,environmental,Population using at least basic drinking water services (%)
+sdg6_sanita,6,environmental,Population using at least basic sanitation services (%)
+sdg6_freshwat,6,environmental,Freshwater withdrawal (% of available freshwater resources)
+sdg6_wastewat,6,environmental,Anthropogenic wastewater that receives treatment (%)
+sdg6_scarcew,6,environmental,Scarce water consumption embodied in imports (m³ H₂Oeq/capita)
+sdg6_safewat,6,environmental,Population using safely managed water services (%)
+sdg6_safesan,6,environmental,Population using safely managed sanitation services (%)
+sdg7_elecac,7,social,Population with access to electricity (%)
+sdg7_cleanfuel,7,social,Population with access to clean fuels and technology for cooking (%)
+sdg7_co2twh,7,social,CO₂ emissions from fuel combustion per total electricity output (MtCO₂/TWh)
+sdg7_renewcon,7,social,Renewable energy share in total final energy consumption (%)
+sdg8_adjgrowthi,8,economic,Adjusted GDP growth index (worst 0-100 best)
+sdg8_slavery,8,economic,"Victims of modern slavery (per 1,000 population)"
+sdg8_accounts,8,economic,Adults with an account at a bank or other financial institution or with a mobile-money-service provider (% of population aged 15 or over)
+sdg8_unemp,8,economic,"Unemployment rate (% of total labor force, ages 15+)"
+sdg8_rights,8,economic,Fundamental labor rights are effectively guaranteed (worst 0–1 best)
+sdg8_impacc,8,economic,Fatal work-related accidents embodied in imports (per million population)
+sdg8_impslav,8,economic,"Victims of modern slavery embodied in imports (per 100,000 population)"
+sdg8_empop,8,economic,Employment-to-population ratio (%)
+sdg8_yneet,8,economic,"Youth not in employment, education or training (NEET) (% of population aged 15 to 24)"
+sdg9_roads,9,economic,Rural population with access to all-season roads (%)
+sdg9_intuse,9,economic,Population using the internet (%)
+sdg9_mobuse,9,economic,Mobile broadband subscriptions (per 100 population)
+sdg9_lpi,9,economic,Logistics Performance Index: Infrastructure Score (worst 1-5 best)
+sdg9_uni,9,economic,The Times Higher Education Universities Ranking: Average score of top 3 universities (worst 0-100 best)
+sdg9_articles,9,economic,"Articles published in academic journals (per 1,000 population)"
+sdg9_rdex,9,economic,Expenditure on research and development (% of GDP)
+sdg9_patents,9,economic,Total patent applications by applicant's origin (per million population)
+sdg9_rdres,9,economic,"Researchers (per 1,000 employed population)"
+sdg9_netacc,9,economic,Gap in internet access by income (percentage points)
+sdg9_womensci,9,economic,Female share of graduates from STEM fields at the tertiary level (%)
+sdg10_gini,10,economic,Gini coefficient
+sdg10_palma,10,economic,Palma ratio
+sdg10_elder,10,economic,Elderly poverty rate (% of population aged 66 or over)
+sdg11_slums,11,social,Proportion of urban population living in slums (%)
+sdg11_pm25,11,social,Annual mean concentration of PM2.5 (μg/m³)
+sdg11_pipedwat,11,social,"Access to improved water source, piped (% of urban population)"
+sdg11_rentover,11,social,Population with rent overburden (%)
+sdg11_urbaccess,11,social,Urban population with access to points of interest within a 15min walk (%)
+sdg11_transport,11,social,Population with convenient access to public transport in cities (%)
+sdg12_msw,12,economic,Municipal solid waste (kg/capita/day)
+sdg12_ewaste,12,economic,Electronic waste that is not recollected (kg/capita)
+sdg12_pollprod,12,economic,"Production-based air pollution (DALYs per 1,000 population)"
+sdg12_pollimp,12,economic,"Air pollution associated with imports (DALYs per 1,000 population)"
+sdg12_nprod,12,economic,Production-based nitrogen emissions (kg/capita)
+sdg12_nimport,12,economic,Nitrogen emissions associated with imports (kg/capita)
+sdg12_explastic,12,economic,Exports of plastic waste (kg/capita)
+sdg12_mswrecycl,12,economic,Non-recycled municipal solid waste (kg/capita/day)
+sdg13_co2gcp,13,environmental,CO₂ emissions from fossil fuel combustion and cement production (tCO2/capita)
+sdg13_ghgimport,13,environmental,GHG emissions embodied in imports (tCO₂/capita)
+sdg13_co2export,13,environmental,CO₂ emissions embodied in fossil fuel exports (tonnes/capita)
+sdg13_ecr,13,environmental,"Carbon Pricing Score at EUR60/tCO₂ (%, worst 0-100 best)"
+sdg14_cpma,14,environmental,Mean area that is protected in marine sites important to biodiversity (%) 
+sdg14_cleanwat,14,environmental,Ocean Health Index: Clean Waters score (worst 0-100 best)
+sdg14_fishstocks,14,environmental,Fish caught from overexploited or collapsed stocks (% of total catch)
+sdg14_trawl,14,environmental,Fish caught by trawling or dredging (%)
+sdg14_discard,14,environmental,Fish caught that are then discarded (%)
+sdg14_biomar,14,environmental,Marine biodiversity threats embodied in imports (per million population)
+sdg15_cpta,15,environmental,Mean area that is protected in terrestrial sites important to biodiversity (%)
+sdg15_cpfa,15,environmental,Mean area that is protected in freshwater sites important to biodiversity (%)
+sdg15_redlist,15,environmental,Red List Index of species survival (worst 0-1 best) 
+sdg15_forchg,15,environmental,"Permanent deforestation (% of forest area, 3-year average)"
+sdg15_impdefor,15,environmental,Imported deforestation (m²/capita)
+sdg16_homicides,16,social,"Homicides (per 100,000 population)"
+sdg16_security,16,social,Crime is effectively controlled (worst 0 - 1 best)
+sdg16_detain,16,social,Unsentenced detainees (% of prison population)
+sdg16_u5reg,16,social,Birth registrations with civil authority (% of children under age 5)
+sdg16_cpi,16,social,Corruption Perceptions Index (worst 0-100 best)
+sdg16_clabor,16,social,Children involved in child labor (%)
+sdg16_weaponsexp,16,social,"Exports of major conventional weapons (TIV constant million USD per 100,000 population)"
+sdg16_rsf,16,social,Press Freedom Index (worst 0-100 best)
+sdg16_justice,16,social,Access to and affordability of justice (worst 0–1 best)
+sdg16_admin,16,social,Timeliness of administrative proceedings (worst 0 - 1 best)
+sdg16_exprop,16,social,Expropriations are lawful and adequately compensated (worst 0 - 1 best)
+sdg16_prison,16,social,"Persons held in prison (per 100,000 population)"
+sdg17_govex,17,other,Government spending on health and education (% of GDP)
+sdg17_oda,17,other,"For high-income and all OECD DAC countries: International concessional public finance, including official development assistance (% of GNI)"
+sdg17_govrev,17,other,Other countries: Government revenue excluding grants (% of GDP)
+sdg17_cohaven,17,other,Corporate Tax Haven Score (best 0-100 worst)
+sdg17_secrecy,17,other,Financial Secrecy Score (best 0-100 worst)
+sdg17_sprofits,17,other,Shifted profits of multinationals (US$ billion)
+sdg17_statperf,17,other,Statistical Performance Index (worst 0-100 best)
+sdg17_multilat,17,other,Index of countries' support to UN-based multilateralism (worst 0-100 best)
