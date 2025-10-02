@@ -9,9 +9,9 @@ from statsmodels.tsa.arima.model import ARIMA
 import warnings
 warnings.filterwarnings("ignore")
 
-# ========================
+
 # Load Data
-# ========================
+
 @st.cache_data
 def load_data():
     df_sdg = pd.read_csv("df_sdg.csv")
@@ -23,12 +23,12 @@ df_sdg, df_lookup = load_data()
 # Validate df_lookup
 expected_cols = ["code", "sdg", "group", "description"]
 if not all(col in df_lookup.columns for col in expected_cols):   
-    st.error(f"⚠️ df_lookup must have columns: {expected_cols}")
+    st.error(f" df_lookup must have columns: {expected_cols}")
     st.stop()
 
-# ========================
+
 # Prediction Function
-# ========================
+
 def run_models(df_entity, target, year_range, selected_models, rf_params, arima_params):
     results = pd.DataFrame({"Year": year_range})
     metrics = {}
@@ -76,7 +76,7 @@ def run_models(df_entity, target, year_range, selected_models, rf_params, arima_
     # ARIMA
     if "ARIMA" in selected_models:
         try:
-            if len(df_clean) >= 5:  # need enough data points
+            if len(df_clean) >= 5:  
                 order = tuple(arima_params["order"])
                 arima_model = ARIMA(df_clean[target], order=order)
                 arima_fit = arima_model.fit()
@@ -94,13 +94,13 @@ def run_models(df_entity, target, year_range, selected_models, rf_params, arima_
 
     return results, metrics
 
-# ========================
+
 # Plot Function (Plotly)
-# ========================
+
 def plot_results(results, df_entity, target, title, key, selected_models, entity_type):
     fig = go.Figure()
 
-    # --- Actual historical data (2000–2025) ---
+    # Actual historical data (2000–2025)
     if target in df_entity.columns:
         df_clean = df_entity[["Year", target]].dropna()
         if not df_clean.empty:
@@ -114,7 +114,7 @@ def plot_results(results, df_entity, target, title, key, selected_models, entity
                 marker=dict(size=6)
             ))
 
-    # --- Predictions (2026–2030) ---
+    # Predictions (2026–2030)
     if results is not None:
         if "Linear Regression" in selected_models and "Linear Regression" in results:
             fig.add_trace(go.Scatter(
@@ -150,15 +150,15 @@ def plot_results(results, df_entity, target, title, key, selected_models, entity
 
     st.plotly_chart(fig, use_container_width=True, key=key)
 
-# ========================
-# Streamlit UI
-# ========================
-st.title("🌍 GoalScope SDG Analytics Hub - Predictions")
 
-# --- Entity Type ---
+# Streamlit UI
+
+st.title(" GoalScope SDG Analytics Hub - Predictions")
+
+# Entity Type
 entity_type = st.selectbox("Entity Type", ["Country", "Region"])
 
-# --- Entities ---
+# Entities 
 if entity_type == "Country":
     entities = sorted(df_sdg["Country"].unique())
 else:
@@ -166,29 +166,29 @@ else:
 
 entity = st.selectbox("Select Entity", entities)
 
-# --- Overall Score (if exists) ---
+# Overall Score 
 if "Overall_Score" in df_sdg.columns:
     df_score = df_sdg[df_sdg[entity_type] == entity][["Year", "Overall_Score"]].dropna()
     if not df_score.empty:
         latest_score = df_score.sort_values("Year").iloc[-1]["Overall_Score"]
         st.metric(label=f"{entity} Latest Overall SDG Score", value=f"{latest_score:.2f}")
 
-# --- Level ---
+# Level 
 level = st.selectbox("Level", ["Goal", "SDG", "Dimension"])
 
-# --- Year Selection ---
+# Year Selection
 year_range = st.slider("Select Prediction Range", 2026, 2030, (2026, 2030))
 year_range = list(range(year_range[0], year_range[1] + 1))
 
-# --- Model Selection ---
+# Model Selection
 selected_models = st.multiselect(
     "Select Models",
     ["Linear Regression", "Random Forest", "ARIMA"],
     default=["Linear Regression", "Random Forest", "ARIMA"]
 )
 
-# --- Hyperparameter Settings ---
-st.sidebar.header("⚙️ Model Parameters")
+# Hyperparameter Settings 
+st.sidebar.header(" Model Parameters")
 
 rf_params = {
     "n_estimators": st.sidebar.slider("RF n_estimators", 50, 300, 100, 10),
@@ -199,12 +199,12 @@ arima_params = {
     "order": st.sidebar.selectbox("ARIMA order (p,d,q)", [(1,1,1), (2,1,2), (3,1,1)], index=0)
 }
 
-# --- Sidebar summary of selected parameters ---
-st.sidebar.subheader("📋 Final Parameters Summary")
+# Sidebar summary of selected parameters
+st.sidebar.subheader(" Final Parameters Summary")
 st.sidebar.write("Random Forest:", rf_params)
 st.sidebar.write("ARIMA:", arima_params)
 
-# --- Target Variable ---
+# Target Variable
 if level == "Dimension":
     groups = df_lookup["group"].unique()
     target_group = st.selectbox("Select Dimension", groups)
@@ -214,7 +214,7 @@ else:
     targets = [c for c in df_sdg.columns if level.lower() in c.lower()]
 
 if not targets:
-    st.error(f"⚠️ No columns found for level {level}")
+    st.error(f" No columns found for level {level}")
     st.stop()
 
 if level != "Dimension":
@@ -222,22 +222,22 @@ if level != "Dimension":
 else:
     target = None
 
-# ========================
+
 # Filter Data
-# ========================
+
 if entity_type == "Country":
     df_entity = df_sdg[df_sdg["Country"] == entity]
 else:
     df_entity = df_sdg[df_sdg["Region"] == entity]
 
-# ========================
+
 # Run Predictions
-# ========================
+
 if df_entity.empty:
-    st.error("⚠️ No data available for this selection.")
+    st.error(" No data available for this selection.")
 else:
     if level == "Dimension":
-        st.subheader(f"📊 Predictions for Dimension: {target_group} ({year_range[0]}–{year_range[-1]})")
+        st.subheader(f" Predictions for Dimension: {target_group} ({year_range[0]}–{year_range[-1]})")
         for i, g_target in enumerate(targets):
             st.markdown(f"### {g_target}")
             results, metrics = run_models(df_entity, g_target, year_range, selected_models, rf_params, arima_params)
@@ -245,7 +245,7 @@ else:
                 st.dataframe(results)
                 st.json(metrics)
 
-                # ✅ Show parameters clearly
+                # Show parameters 
                 with st.expander("Final Parameters Used"):
                     if "Random Forest" in metrics:
                         st.write("Random Forest:", metrics["Random Forest"]["Params"])
@@ -264,7 +264,7 @@ else:
                     st.dataframe(results)
                     st.json(metrics)
 
-                    # ✅ Show parameters clearly
+                    # Show parameters 
                     with st.expander("Final Parameters Used"):
                         if "Random Forest" in metrics:
                             st.write("Random Forest:", metrics["Random Forest"]["Params"])
@@ -279,7 +279,7 @@ else:
                 st.dataframe(results)
                 st.json(metrics)
 
-                # ✅ Show parameters clearly
+                # Show parameters 
                 with st.expander("Final Parameters Used"):
                     if "Random Forest" in metrics:
                         st.write("Random Forest:", metrics["Random Forest"]["Params"])
@@ -288,4 +288,5 @@ else:
 
                 plot_results(results, df_entity, target, f"{target} Predictions", key=target, selected_models=selected_models, entity_type=entity_type)
             else:
-                st.error("⚠️ Prediction failed. Please try another selection.")
+                st.error(" Prediction failed. Please try another selection.")
+
